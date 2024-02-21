@@ -1,0 +1,15 @@
+<h1>Showing Restaurant</h1>
+
+<li><%= @restaurant.name %></li>
+<li><%= @restaurant.address %></li>
+<li><%= @restaurant.phone_number %></li>
+<li><%= @restaurant.category %></li>
+<% @reviews.each do |review| %>
+    <li><%= review.content %></li>
+    <li><%= review.rating %></li>
+<% end %>
+
+<%= link_to "back", restaurants_path(@restaurants)%>
+
+
+<%= link_to "delete", restaurant_path(@restaurant), data: {turbo_method: :delete}%>

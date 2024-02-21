@@ -1,0 +1,17 @@
+<h1>Restaurants</h1>
+
+ <% @restaurants.each do |restaurant| %>
+<form action="">
+  <%= link_to restaurant.name, restaurant_path(restaurant)%>
+</form>
+<% end %>
+
+<%# <ul>
+  <% @tasks.each do |task| %>
+    <%# <li><%= link_to task.title, task_path(task)%></li>
+  <%# <% end %>
+<%# </ul> %>
+
+<%# <%= link_to "tasks/new", tasks_path(@tasks.new)%>
+
+<%= link_to "create new", "restaurants/new"%>
